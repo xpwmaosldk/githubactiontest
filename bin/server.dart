@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as io;
 import 'package:shelf_static/shelf_static.dart';
@@ -11,5 +9,5 @@ void main() {
           defaultDocument: 'index.html',
         ),
       );
-  io.serve(_handler, 'localhost', 8080);
+  io.serve(_handler, '127.0.0.1', 8080);
 }
