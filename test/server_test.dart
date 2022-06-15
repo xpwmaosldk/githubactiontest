@@ -12,7 +12,10 @@ void main() {
       ['run', 'bin/server.dart'],
       environment: {'PORT': port},
     );
+    await Future.delayed(const Duration(seconds: 2));
   });
+
+  tearDown(() => print('teardown!'));
 
   // test('Root', () async {
   //   final response = await get(Uri.parse(host + '/'));
